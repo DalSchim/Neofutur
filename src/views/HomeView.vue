@@ -9,10 +9,13 @@
       <video autoplay muted loop>
         <source src="@/assets/video/header-video.mp4" type="video/mp4">
       </video>
+
     </div>
-    <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-      <path class="elementor-shape-fill" d="M500.2,94.7L0,0v100h1000V0L500.2,94.7z"></path>
-    </svg>
+    <div>
+      <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path class="elementor-shape-fill" d="M500.2,94.7L0,0v100h1000V0L500.2,94.7z"></path>
+      </svg>
+    </div>
   </section>
   <section class="services">
     <div>
@@ -183,6 +186,7 @@ export default {
           display: flex;
           align-items: center;
           justify-content: center;
+
           &::before {
             display: block;
             content: "";
@@ -191,6 +195,7 @@ export default {
             background-color: #12426E;
             margin-right: 20px;
           }
+
           &::after {
             display: block;
             content: "";
@@ -199,6 +204,7 @@ export default {
             background-color: #12426E;
             margin-left: 20px;
           }
+
           @media (max-width: 768px) {
             font-size: 11px;
 
