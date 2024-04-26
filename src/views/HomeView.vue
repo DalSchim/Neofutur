@@ -91,6 +91,8 @@ export default {
 <style scoped lang="scss">
 .home {
   height: 100vh;
+  @media (max-width: 768px) {
+  }
 
   .back-ground {
     position: absolute;
@@ -121,7 +123,12 @@ export default {
       padding: 0 20px;
     }
 
+
     .t1 {
+      @media (max-width: 768px) {
+        margin-top: 20px;
+      }
+
       h2 {
         color: #12426E;
         font-family: "Anton", Sans-serif;
@@ -132,6 +139,9 @@ export default {
         word-spacing: 0px;
         text-transform: uppercase;
         height: 64px;
+        @media (max-width: 768px) {
+          font-size: 45px;
+        }
       }
 
       @media (max-width: 768px) {
@@ -153,7 +163,7 @@ export default {
 
       @media (max-width: 768px) {
         h1 {
-          font-size: 65px;
+          font-size: 43px;
         }
       }
     }
@@ -173,7 +183,6 @@ export default {
           display: flex;
           align-items: center;
           justify-content: center;
-
           &::before {
             display: block;
             content: "";
@@ -182,7 +191,6 @@ export default {
             background-color: #12426E;
             margin-right: 20px;
           }
-
           &::after {
             display: block;
             content: "";
@@ -191,22 +199,17 @@ export default {
             background-color: #12426E;
             margin-left: 20px;
           }
-        }
-      }
-
-      @media (max-width: 768px) {
-        span {
-          h3 {
-            font-size: 18px;
+          @media (max-width: 768px) {
+            font-size: 11px;
 
             &::before {
-              width: 25px;
+              width: 8px;
               height: 2px;
               margin-right: 10px;
             }
 
             &::after {
-              width: 25px;
+              width: 8px;
               height: 2px;
               margin-left: 10px;
             }
@@ -302,6 +305,7 @@ export default {
   background-color: #12426E;
   width: 100%;
   padding: 150px 0;
+
   div {
     display: flex;
     width: 35%;
@@ -326,6 +330,7 @@ export default {
       line-height: 80px;
     }
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
     padding: 50px 0;
@@ -394,6 +399,7 @@ export default {
           width: 150px;
           height: 150px;
         }
+
         img {
           width: 100%;
           height: 100%;
@@ -403,7 +409,8 @@ export default {
     }
   }
 }
-.decoration3{
+
+.decoration3 {
   width: 100%;
   height: 100px;
   position: absolute;
@@ -412,7 +419,6 @@ export default {
   right: 0;
   z-index: -1;
 }
-
 
 
 </style>
