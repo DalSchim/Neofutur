@@ -106,6 +106,10 @@ h3 {
   padding: 16px;
   transform: rotateY(180deg);
   border-radius: 10px;
+  p{
+    font-size: 18px;
+    font-family: "Roboto Thin", sans-serif;
+  }
   div {
     position: absolute;
     padding: 16px;
@@ -114,11 +118,8 @@ h3 {
       font-size: 24px;
       font-family: "Roboto Thin", sans-serif;
     }
-
   }
-
 }
-
 .back p {
   font-size: 18px;
 }

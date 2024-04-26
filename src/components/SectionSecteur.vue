@@ -60,5 +60,14 @@ padding: 64px 16px;
   }
 }
 
+@media (max-width: 768px) {
+  .card-contain {
+    padding: 32px 16px;
+  }
+  .card-wrapeur {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
 
 </style>

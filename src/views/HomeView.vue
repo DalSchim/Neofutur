@@ -25,7 +25,7 @@
       <h2>Expertises</h2>
     </div>
     <div class="expertise-component">
-        <ExpertisesComponent/>
+      <ExpertisesComponent/>
     </div>
   </section>
   <section-secteur/>
@@ -42,20 +42,50 @@
       <span>+100K</span>
       <p>Utilisateurs</p>
     </div>
-
   </section>
+  <propo-component/>
+  <notre-equipe/>
+  <section class="notre-confiance">
+    <div class="title">
+      <h2>Ils nous font confiance</h2>
+      <p>La satisfaction client est une priorité chez NEOFUTUR</p>
+    </div>
+    <div class="containeur">
+      <div class="grid-wrape-image">
+        <div>
+          <img src="@/assets/img/confiance-image/opm.webp" alt="logo cedre">
+        </div>
+        <div>
+          <img src="@/assets/img/confiance-image/Sans-titre-1-qfhnz77sud90zznvwemcibm2nj3y7lx30j1k10mn2w.png"
+               alt="logo cedre">
+        </div>
+        <div>
+          <img src="@/assets/img/confiance-image/image-verticale-jpg.webp" alt="logo cedre">
+        </div>
+        <div>
+          <img src="@/assets/img/confiance-image/ihj.png" alt="logo cedre">
+        </div>
+        <div>
+          <img src="@/assets/img/confiance-image/logo_CEM-blanc.png" alt="logo cedre">
+        </div>
+      </div>
+    </div>
+  </section>
+  <partenaire-component/>
 </template>
-
 <script>
 // @ is an alias to /src
 
 
 import ExpertisesComponent from "@/components/ExpertisesComponent.vue";
 import SectionSecteur from "@/components/SectionSecteur.vue";
+import PropoComponent from "@/components/PropoComponent.vue";
+import NotreEquipe from "@/components/NotreEquipe.vue";
+import PartenaireComponent from "@/components/PartenaireComponent.vue";
 
 export default {
   name: 'HomeView',
-  components: {SectionSecteur, ExpertisesComponent},
+  components: {PartenaireComponent, NotreEquipe, PropoComponent, SectionSecteur, ExpertisesComponent},
 }
 </script>
 <style scoped lang="scss">
@@ -241,6 +271,7 @@ export default {
     max-width: 1300px;
     margin-right: auto;
     margin-left: auto;
+
     h2 {
       color: #12426E;
       font-family: "Roboto", Sans-serif;
@@ -271,7 +302,6 @@ export default {
   background-color: #12426E;
   width: 100%;
   padding: 150px 0;
-
   div {
     display: flex;
     width: 35%;
@@ -296,5 +326,93 @@ export default {
       line-height: 80px;
     }
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 50px 0;
+    div {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
 }
+
+.notre-confiance {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+  width: 100%;
+
+  .title {
+    text-align: center;
+    max-width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+
+    h2 {
+      color: #12426E;
+      font-family: "Roboto", Sans-serif;
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 100px;
+    }
+
+    p {
+      color: #12426E;
+      font-family: "Roboto", Sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 80px;
+    }
+  }
+
+  .containeur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 80px 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    .grid-wrape-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 20px;
+      margin: auto; // Centrer la grille d'images
+
+      div {
+        width: 200px;
+        height: 200px;
+        @media (max-width: 768px) {
+          width: 150px;
+          height: 150px;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+.decoration3{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+
 </style>
