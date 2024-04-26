@@ -5,16 +5,16 @@
       <div class="t2"><h1>Informatique</h1></div>
       <div class="t3"><span><h3>Entreprises - association - édducation</h3></span></div>
     </div>
+
     <div class="back-ground video">
       <video autoplay muted loop>
         <source src="@/assets/video/header-video.mp4" type="video/mp4">
       </video>
-
-    </div>
-    <div>
-      <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="elementor-shape-fill" d="M500.2,94.7L0,0v100h1000V0L500.2,94.7z"></path>
-      </svg>
+      <div>
+        <svg class="svg1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class="elementor-shape-fill" d="M500.2,94.7L0,0v100h1000V0L500.2,94.7z"></path>
+        </svg>
+      </div>
     </div>
   </section>
   <section class="services">
@@ -104,12 +104,12 @@ export default {
     right: 0;
     z-index: -1;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     video {
       width: 100%;
       object-fit: cover;
-      height: 100vh;
+      height: 100%;
     }
   }
 
