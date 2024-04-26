@@ -94,9 +94,7 @@ export default {
 <style scoped lang="scss">
 .home {
   height: 100vh;
-  @media (max-width: 768px) {
-  }
-
+  position: relative;
   .back-ground {
     position: absolute;
     top: 0;
