@@ -18,7 +18,7 @@ export default {
   mounted() {
     // on set link en blanc et le logo en blanc
     this.handleScroll();
-     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
 
     if (this.isMobile()) {
       this.show = false;
@@ -26,42 +26,31 @@ export default {
       this.show = true;
     }
 
-     // on verifi la taille de l'ecran pour afficher ou non le menu
+    // on verifi la taille de l'ecran pour afficher ou non le menu
     window.addEventListener('resize', () => {
-      if (this.isMobile()) {
-        this.show = false;
-      } else if (this.isDesktop()) {
-        this.show = true;
-      }
-    }
+          if (this.isMobile()) {
+            this.show = false;
+          } else if (this.isDesktop()) {
+            this.show = true;
+          }
+        }
     );
   },
 
   methods: {
-    // si on scroll le header devient bleu et on recuper tout les lien en les metamorphosant en blanc et on change le logo
+    // si on scroll le header devient bleu et on change le logo
     handleScroll() {
-
-      // on recupere le header et les lien
-      const header = document.querySelector('header');
-      const links = document.querySelectorAll('header a');
-      const logo = document.querySelector('header img');
-      const span = document.querySelectorAll('header span');
-      // si on scroll on change le style du header et des lien
       if (window.scrollY > 0) {
+        document.querySelector('header').classList.add('blue');
+        document.querySelector('header').classList.remove('white');
         this.logo = require("@/assets/img/logo-blue.png");
-        header.style.backgroundColor = '#12426e';
-        logo.style.maxWidth = '70px';
-        links.forEach(link => link.style.color = 'white');
-        span.forEach(span => span.style.backgroundColor = 'white');
-
       } else {
+        document.querySelector('header').classList.add('white');
+        document.querySelector('header').classList.remove('blue');
         this.logo = require("@/assets/img/logo-white.png");
-        logo.style.maxWidth = '200px';
-        links.forEach(link => link.style.color = '#12426e');
-        span.forEach(span => span.style.backgroundColor = '#12426e');
-        header.style.backgroundColor = 'white';
       }
     },
+
     // si on click sur le burgeur on affiche le menu
     handleShow() {
       setTimeout(() => {
@@ -85,32 +74,32 @@ export default {
     <router-link to="/"><img class="logo" :src="logo" alt="logo"></router-link>
 
     <transition
-    name="fade"
-    @after-enter="show = true"
-    @after-leave="show = false"
+        name="fade"
+        @after-enter="show = true"
+        @after-leave="show = false"
     >
-    <nav v-if="show" id="">
-      <router-link class="link" to="/service">Services</router-link>
-      <router-link class="link" to="/expertises">Expertises</router-link>
-      <router-link class="link" to="/Propos">À Propos de nous</router-link>
-      <router-link class="link" to="/contact">Contact</router-link>
+      <nav v-if="show" id="">
+        <router-link class="link" to="/#services">Services</router-link>
+        <router-link class="link" to="/#expertises">Expertises</router-link>
+        <router-link class="link" to="/#propos">À Propos de nous</router-link>
+        <router-link class="link" to="/#contact">Contact</router-link>
 
-      <div class="link-externe-hiden">
-        <a class="link" href="#">
-          <Icon icon="ic:sharp-person" width="24"/>
-          Espace client</a>
-        <a class="link" href="#">
-          <Icon icon="typcn:group" width="24"/>
-          Espace support</a>
-      </div>
-    </nav>
+        <div class="link-externe-hiden">
+          <a class="link" href="#">
+            <Icon icon="ic:sharp-person" width="24"/>
+            Espace client</a>
+          <a class="link" href="https://neofutur.servicedesk.atera.com/login?redirectTo=%2F">
+            <Icon icon="typcn:group" width="24"/>
+            Espace support</a>
+        </div>
+      </nav>
     </transition>
 
     <div class="link-externe">
       <a class="link" href="#">
         <Icon icon="ic:sharp-person" width="24"/>
         Espace client</a>
-      <a class="link" href="#">
+      <a class="link" href="https://neofutur.servicedesk.atera.com/login?redirectTo=%2F">
         <Icon icon="typcn:group" width="24"/>
         Espace support</a>
     </div>
@@ -132,19 +121,20 @@ export default {
   transform: translateX(100%);
 }
 
-fade-leave-active{
+fade-leave-active {
   transition: transform 0.1s;
   transform: translateX(0);
 }
 
-.fade-enter,  /* .fade-leave-active in <2.1.8 */ {
+.fade-enter, /* .fade-leave-active in <2.1.8 */
+{
   transform: translateX(0);
 }
-.fade-leave-to,  /* .fade-enter-active in <2.1.8 */ {
+
+.fade-leave-to, /* .fade-enter-active in <2.1.8 */
+{
   transform: translateX(100%);
 }
-
-
 
 
 .burgeur-buton-containeur {
@@ -163,6 +153,7 @@ fade-leave-active{
   display: flex;
   flex-direction: column;
   gap: 4px;
+
   span {
     width: 30px;
     height: 4px;
@@ -177,7 +168,6 @@ header {
   align-items: center;
   padding: 8px 32px;
   transition: all 0.3s;
-background-color: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -210,9 +200,9 @@ background-color: white;
       margin: 0 8px;
       font-weight: 600;
       text-decoration: none;
-      color: #12426e;
       text-transform: uppercase;
       font-family: "Roboto Thin", sans-serif;
+
       &:hover {
         color: #1da6e0 !important;
       }
@@ -224,10 +214,12 @@ background-color: white;
   img {
     max-width: 200px;
   }
+
   div {
     display: flex;
     align-items: center;
     gap: 16px;
+
     a {
       font-family: "Roboto Thin", sans-serif;
       text-transform: uppercase;
@@ -236,8 +228,10 @@ background-color: white;
       font-weight: bold;
       display: flex;
       align-items: center;
+
       &:hover {
         color: #1da6e0 !important;
+
         Icon {
           color: #1da6e0 !important;
         }
@@ -250,12 +244,14 @@ background-color: white;
 nav a.router-link-exact-active {
   color: #42b983;
 }
-.link-externe{
+
+.link-externe {
   @media screen and (max-width: 920px) {
     display: none;
   }
 }
-.link-externe-hiden{
+
+.link-externe-hiden {
   display: none;
   @media screen and (max-width: 920px) {
     display: flex;
@@ -273,4 +269,53 @@ nav a.router-link-exact-active {
     }
   }
 }
+
+
+.blue {
+  .burgeur-buton-containeur {
+    span {
+      background-color: #FFFFFF;
+    }
+  }
+
+  background-color: #12426e;
+  color: #FFFFFF;
+
+  nav a {
+    color: #FFFFFF;
+  }
+
+  .link-externe a {
+    color: #FFFFFF;
+  }
+
+  img {
+    max-width: 80px;
+  }
+}
+
+
+.white {
+  .burgeur-buton-containeur {
+    span {
+      background-color: #12426E;
+    }
+  }
+
+  background-color: #FFFFFF;
+  color: #12426e;
+
+  nav a {
+    color: #12426e;
+  }
+
+  .link-externe a {
+    color: #12426e
+  }
+
+  img {
+    max-width: 200px;
+  }
+}
+
 </style>

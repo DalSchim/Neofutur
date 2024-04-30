@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <section class="propos">
+  <section class="propos" id="propos">
     <div class="description">
       <div class="overlay"></div>
       <div class="text">

@@ -1,5 +1,5 @@
 <template>
-  <section class="home">
+  <section class="home" id="home">
     <div class="titre">
       <div class="t1"><h2>Votre Parteniare</h2></div>
       <div class="t2"><h1>Informatique</h1></div>
@@ -17,13 +17,13 @@
       </div>
     </div>
   </section>
-  <section class="services">
+  <section class="services" id="services">
     <div>
       <h2>Service</h2>
       <p>Une DSI privée pour gagner en productivité</p>
     </div>
   </section>
-  <section class="expertise">
+  <section class="expertise" id="expertises">
     <div class="e-titre">
       <h2>Expertises</h2>
     </div>
@@ -75,6 +75,7 @@
     </div>
   </section>
   <partenaire-component/>
+  <contact-view/>
 </template>
 <script>
 // @ is an alias to /src
@@ -85,10 +86,12 @@ import SectionSecteur from "@/components/SectionSecteur.vue";
 import PropoComponent from "@/components/PropoComponent.vue";
 import NotreEquipe from "@/components/NotreEquipe.vue";
 import PartenaireComponent from "@/components/PartenaireComponent.vue";
+import ContactView from "@/components/ContactView.vue";
 
 export default {
   name: 'HomeView',
-  components: {PartenaireComponent, NotreEquipe, PropoComponent, SectionSecteur, ExpertisesComponent},
+  components: {
+    ContactView, PartenaireComponent, NotreEquipe, PropoComponent, SectionSecteur, ExpertisesComponent},
 }
 </script>
 <style scoped lang="scss">

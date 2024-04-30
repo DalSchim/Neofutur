@@ -44,7 +44,6 @@ padding: 64px 16px;
   }
 }
 
-
 .decoration{
   overflow: hidden;
   position: absolute;
