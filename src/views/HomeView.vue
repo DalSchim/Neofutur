@@ -3,7 +3,7 @@
     <div class="titre">
       <div class="t1"><h2>Votre Parteniare</h2></div>
       <div class="t2"><h1>Informatique</h1></div>
-      <div class="t3"><span><h3>Entreprises - association - édducation</h3></span></div>
+      <div class="t3"><span><h3>Entreprises - association - éducation</h3></span></div>
     </div>
 
     <div class="back-ground video">
@@ -48,7 +48,7 @@
   </section>
   <propo-component/>
   <notre-equipe/>
-  <section class="notre-confiance">
+  <section class="notre-confiance" id="notre-confiance">
     <div class="title">
       <h2>Ils nous font confiance</h2>
       <p>La satisfaction client est une priorité chez NEOFUTUR</p>

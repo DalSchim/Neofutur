@@ -22,11 +22,11 @@ export default {
           valeurs d’excellence et d’intégrité promues par la société.</p>
       </div></div>
     <div class="buton">
-      <a href="hero-mouse">
+      <router-link to="/#notre-equipe">
         <div class="mouse-icon">
           <span></span>
         </div>
-      </a>
+      </router-link>
     </div>
     <div class="decoration-a">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2600 131.1" preserveAspectRatio="none">

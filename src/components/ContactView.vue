@@ -26,7 +26,7 @@ export default {
 <template>
   <section class="contact" id="contact">
     <div class="contact-titre">
-      <h2>Contact-nous</h2>
+      <h2>Contactez-nous</h2>
     </div>
     <div class="wrapper">
       <div class="information">
@@ -46,7 +46,7 @@ export default {
             </div>
             <div>
               <h3>Téléphone</h3>
-              <p>01 39 73 10 10</p>
+              <p>01 34 74 11 11 </p>
             </div>
           </div>
           <div class="section-info">
@@ -109,14 +109,14 @@ export default {
           <div class="groupe">
             <div class="form-group">
               <select name="select" id="select" placeholder="Vous êtes">
-                <option value="adérent">Adérent</option>
+                <option value="Adhérent">Adhérent</option>
                 <option value="établisement">Établisement</option>
                 <option value="autre">Autre</option>
               </select>
             </div>
             <div class="form-group">
-              <input type="text" id="numero-d'aderant" name="numero-d'aderant" required
-                     placeholder="Numéro d'adérent">
+              <input type="text" id="numero-d'adherant" name="n-aderant" required
+                     placeholder="Numéro d'adhérent">
             </div>
           </div>
           <textarea name="message" id="message" cols="30" rows="10" required

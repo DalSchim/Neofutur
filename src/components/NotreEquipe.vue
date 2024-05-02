@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <section class="Equipe">
+  <section class="Equipe" id="notre-equipe">
     <div class="titre ">
       <h2>Notre équipe</h2>
     </div>
@@ -18,14 +18,13 @@ export default {
     </div>
         <card-equipe/>
     <div class="buton">
-      <a href="hero-mouse">
+      <router-link to="/#notre-confiance">
         <div class="mouse-icon">
           <span></span>
         </div>
-      </a>
+      </router-link>
     </div>
   </section>
-
 </template>
 
 <style scoped lang="scss">

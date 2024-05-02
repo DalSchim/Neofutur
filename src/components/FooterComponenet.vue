@@ -41,7 +41,7 @@ export default {
         <h3> Légal</h3>
         <div class="container">
           <router-link to="/mentions-legales">Mentions légales</router-link>
-          <router-link to="/politique-de-confidentialite">confidentialité et RGPD</router-link>
+          <router-link to="/politique-de-confidentialite">Confidentialité et RGPD</router-link>
         </div>
         <div class="text">
           <p>
